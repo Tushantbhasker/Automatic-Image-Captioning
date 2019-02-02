@@ -21,14 +21,18 @@ To run this progarm you have a Python SciPy environment installed, ideally with 
 installed with either the TensorFlow or Theano backend.You also have scikit-learn, Pandas, NumPy, and Matplotlib installed.
 
 ## Dataset
-
+The dataset is available for free. You must complete a request form and the links to the dataset will be emailed to you.
+[Request Form](https://forms.illinois.edu/sec/1713398)<br/>
+Within a short time, you will receive an email that contains links to two files:
+* Flickr8k_Dataset.zip (1 Gigabyte) An archive of all photographs.
+* Flickr8k_text.zip (2.2 Megabytes) An archive of all text descriptions for photographs.
 
 ## Defining the Model
 
 
 ## Output
-![Inout Image](/sample_image.png)<br/>
-__Predicted Output: __ A
+![Inout Image](images/example.jpg)<br/>
+__Predicted Output: __ three boys playing in the grass
 ## Dependencies
 * Keras
 * Tensorflow
