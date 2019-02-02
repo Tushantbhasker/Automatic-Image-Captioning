@@ -27,9 +27,36 @@ Within a short time, you will receive an email that contains links to two files:
 * Flickr8k_Dataset.zip (1 Gigabyte) An archive of all photographs.
 * Flickr8k_text.zip (2.2 Megabytes) An archive of all text descriptions for photographs.
 
-## Defining the Model
+## Prepare dataset
+### Image dataset
+The images folder is large(1 Gb). Iterating all this data over our data again and again is quite expensive. So to avoid this we 
+are going to extract the features from the images and save them in a features.pkl file for furher use. Training the model will be 
+done on this features. To extract the features we will be using VGG16, a pre-trained model provided by the Keras. We will remove the
+last layer from the loaded model, as this is the model used to predict a classification for a photo. And save the internal
+representation of the images before classification.
+VGG16 take 500 Mb of data to download in first time.
+### Text dataset
+Here we will be doing normal text processing like cleaning, mapping it with images,  etc.
 
+This data pre-processing is done in __features_extracting.py__.
 
+## Develop Deep Learning Model
+In this section we will define and fit our deep learning model.
+This part is done in __training.py__.
+
+## Evaluate Model
+In this section we will evaluate our model. We will be using BLEU Score.
+this part is done in __evaluating_model.py__.
+
+## Generating Captions Images
+We have fit and evaluate our model. Now it's time to generate caption for new images.
+But first we need to made a vocabulary for text generation.But this will require training data set at everytime we generate the 
+Captions for a new image. An alternative would be to use our own vocabulary file and mapping to integers function during training.
+We can create the Tokenizer as before and save it as a pickle file tokenizer.pkl.
+This part is done in __token_for_prediction.py__.
+
+Now we will take a image and extract it's features by VGG16 model and pass it through our model to generate the captions.
+This part is done in generating_new_caption.py__.
 ## Output
 ![Inout Image](images/example.jpg)<br/>
 __Predicted Output: __ three boys playing in the grass
