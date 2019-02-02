@@ -4,6 +4,21 @@
 # -> Defining the model.
 # -> Fitting the model.
 
+from numpy import array
+from pickle import load
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.utils import to_categorical
+from keras.utils import plot_model
+from keras.models import Model
+from keras.layers import Input
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers import Embedding
+from keras.layers import Dropout
+from keras.layers.merge import add
+from keras.callbacks import ModelCheckpoint
+
 # =====================================================================================================
 # Loading Data.
 #loading the data
