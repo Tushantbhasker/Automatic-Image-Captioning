@@ -46,7 +46,7 @@ This part is done in __training.py__.
 
 ## Evaluate Model
 In this section we will evaluate our model. We will be using BLEU Score.
-this part is done in __evaluating_model.py__.
+This part is done in __evaluating_model.py__.
 
 ## Generating Captions Images
 We have fit and evaluate our model. Now it's time to generate caption for new images.
@@ -56,7 +56,7 @@ We can create the Tokenizer as before and save it as a pickle file tokenizer.pkl
 This part is done in __token_for_prediction.py__.
 
 Now we will take a image and extract it's features by VGG16 model and pass it through our model to generate the captions.
-This part is done in generating_new_caption.py__.
+This part is done in generating __new_caption.py__.
 ## Output
 ![Inout Image](images/example.jpg)<br/>
 __Predicted Output: __ three boys playing in the grass
